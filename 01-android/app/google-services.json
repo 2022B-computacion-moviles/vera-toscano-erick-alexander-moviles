@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "85408120540",
+    "project_id": "movcomp-eavt",
+    "storage_bucket": "movcomp-eavt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85408120540:android:0753fce4bd68ef6a6a3e19",
+        "android_client_info": {
+          "package_name": "com.example.movcompeavt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85408120540-camaqe186bequ5u243no5fh3chb1d7hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj31WUu4np_Q-rn3fflN2aurMmKEw2KN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85408120540-camaqe186bequ5u243no5fh3chb1d7hb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
