@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola_Mundo">Hello world land english</string>
+    <color name="color_hola_mundo">#82E0AA</color>
+</resources>
