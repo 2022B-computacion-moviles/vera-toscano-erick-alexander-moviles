@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b08bed2-3257-4846-81a1-f66474e25c73" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/00-kotlin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/00-kotlin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/eavt-moviles/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../00-kotlin/untitled/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../00-kotlin/untitled/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/androidTest/java/com/example/movcompeavt/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/androidTest/java/com/example/movcompeavt/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/BBaseDatosMemoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/BBaseDatosMemoria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/BEntrenador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/BEntrenador.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/java/com/example/movcompeavt/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/xml/backup_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/app/src/test/java/com/example/movcompeavt/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/app/src/test/java/com/example/movcompeavt/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KiIPwHOi8QIYZkgRVzoEN5WUzT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/erick/Downloads/bastidas-verduga-cristian-gabriel-main/bastidas-verduga-cristian-gabriel-main/ExaBIM1CGBV&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\erick\OneDrive\Documentos\GitHub\vera-toscano-erick-alexander-moviles\ExamenMovilesEAVT\src\main\kotlin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b08bed2-3257-4846-81a1-f66474e25c73" name="Changes" comment="" />
+      <created>1674450955478</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674450955478</updated>
+      <workItem from="1674450956566" duration="2284000" />
+      <workItem from="1674536250674" duration="5442000" />
+      <workItem from="1674542018393" duration="1969000" />
+      <workItem from="1674544021444" duration="64000" />
+      <workItem from="1674544157974" duration="309000" />
+      <workItem from="1674593927935" duration="18129000" />
+      <workItem from="1674619692676" duration="2317000" />
+      <workItem from="1674622029985" duration="1256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
