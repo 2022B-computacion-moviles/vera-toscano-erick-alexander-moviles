@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">MovCompEAVT</string>
+    <string name="app_name" translatable="false">EVera Moviles</string>
     //translatable para usar en español e ingles
     <string name="hola_Mundo">Hola mundo</string>
     <color name="color_hola_mundo">#1AA870</color>
