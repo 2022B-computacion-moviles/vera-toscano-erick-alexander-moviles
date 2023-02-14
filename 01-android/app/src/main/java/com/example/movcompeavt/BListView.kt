@@ -117,7 +117,7 @@ class BListView : AppCompatActivity() {
     fun anadirEntrenador (adaptador: ArrayAdapter<BEntrenador>){
         arreglo.add(
             BEntrenador(
-                "Ejemplo", "a@a.com"
+                1,"Ejemplo", "a@a.com"
             )
         )
         adaptador.notifyDataSetChanged()
