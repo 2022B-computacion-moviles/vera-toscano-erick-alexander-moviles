@@ -122,7 +122,6 @@ class ESqliteHelperEntrenador(contexto: Context?) : SQLiteOpenHelper(
                 usuarioEncontrado.descripcion = descripcion
             }
         } while (resultadoConsultaLectura.moveToNext())
-        
         resultadoConsultaLectura.close()
         baseDatosLectura.close()
         return usuarioEncontrado
