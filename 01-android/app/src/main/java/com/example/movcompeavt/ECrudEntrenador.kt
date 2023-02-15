@@ -9,8 +9,6 @@ class ECrudEntrenador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ecrud_entrenador)
-
-        //Botón para crear base de datos
         val botonCrearBDD = findViewById<Button>(R.id.btn_crear_bdd)
         botonCrearBDD
             .setOnClickListener {
@@ -21,8 +19,6 @@ class ECrudEntrenador : AppCompatActivity() {
                     descripcion.text.toString()
                 )
             }
-
-        //Boton buscar en bdd
         val botonBuscarBDD = findViewById<Button>(R.id.btn_buscar_bdd)
         botonBuscarBDD
             .setOnClickListener {
@@ -38,9 +34,6 @@ class ECrudEntrenador : AppCompatActivity() {
                 descripcion.setText(entrenador.descripcion)
             }
 
-        //
-
-        //boton actualizar bdd
         val botonActualizarBDD = findViewById<Button>(R.id.btn_actualizar_bdd)
         botonActualizarBDD
             .setOnClickListener {
@@ -53,8 +46,6 @@ class ECrudEntrenador : AppCompatActivity() {
                     id.text.toString().toInt()
                 )
             }
-
-        //boton eliminar de la bdd
         val botonEliminarBDD = findViewById<Button>(R.id.btn_eliminar_bdd)
         botonEliminarBDD.setOnClickListener {
             val id = findViewById<EditText>(R.id.input_id)

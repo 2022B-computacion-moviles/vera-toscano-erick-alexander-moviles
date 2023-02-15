@@ -9,28 +9,26 @@ class CIntentExplicitoParametros : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cintent_explicito_parametros)
-
         val nombre = intent.getStringExtra("nombre")
         val apellido = intent.getStringExtra("apellido")
-        val edad = intent.getIntExtra("edad",0)
+        val edad = intent.getIntExtra("edad", 0)
         val entrenador = intent.getParcelableExtra<BEntrenador>(
-            "Entrenador"
+            "entrenador"
         )
 
         val boton = findViewById<Button>(R.id.btn_devolver_respuesta)
-        boton
-            .setOnClickListener { devolverRespuesta() }
+        boton.setOnClickListener { devolverRespuesta() }
     }
 
-
-    fun devolverRespuesta(){
+    fun devolverRespuesta() {
         val intentDevolverParametros = Intent()
-        intentDevolverParametros.putExtra("nomvreModificado", "Vicente")
-        intentDevolverParametros.putExtra("edadModificado",33)
+        intentDevolverParametros.putExtra("nombreModificado", "Vicente")
+        intentDevolverParametros.putExtra("edadModificado", 33)
+//      this.setResult
         setResult(
-            RESULT_OK,
-            intentDevolverParametros
+            RESULT_OK, intentDevolverParametros
         )
+//      this.finish()
         finish()
     }
 }

@@ -3,10 +3,11 @@ package com.example.movcompeavt
 import android.os.Parcel
 import android.os.Parcelable
 
-class BEntrenador (
+class BEntrenador(
     var id: Int,
     var nombre:String,
-    var descripcion:String):Parcelable{
+    var descripcion:String,
+): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
@@ -14,14 +15,14 @@ class BEntrenador (
     ) {
     }
 
-    override fun toString(): String {
-        return "${nombre} - ${descripcion}"
-    }
-
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
         parcel.writeString(nombre)
         parcel.writeString(descripcion)
+    }
+
+    override fun toString(): String {
+        return "${nombre} - ${descripcion}"
     }
 
     override fun describeContents(): Int {
