@@ -91,30 +91,37 @@ class ESqliteHelperEntrenador(
         return if (resultadoActualizacion == -1) false else true
     }
 
-    fun consultarEntrenadorPorId(id: Int): BEntrenador {
-        // val baseDatosLectura = this.readableDatabase
+    fun consultarEntrenadorPorId(id:Int): BEntrenador{
+        // val BaseDatosLectura = this.readableDatabase
         val baseDatosLectura = readableDatabase
-        val scriptConsultarUsuario = "SELECT * FROM ENTRENADOR WHERE ID = ?"
+        val scriptConsultaUsuario = "SELECT * FROM ENTRENADOR WHERE ID = ?"
         val resultadoConsultaLectura = baseDatosLectura.rawQuery(
-            scriptConsultarUsuario,
+            scriptConsultaUsuario,
             arrayOf(
                 id.toString()
             )
         )
+        //logica de busqueda
         val existeUsuario = resultadoConsultaLectura.moveToFirst()
-        val usuarioEncontrado = BEntrenador(0, "", "")
-        // LOGICA OBTENER EL USUARIO
-        do {
-            val id = resultadoConsultaLectura.getInt(0) // columna indice 0 -> ID
-            val nombre = resultadoConsultaLectura.getString(1) // Columna indice 1 -> NOMBRE
-            val descripcion =
-                resultadoConsultaLectura.getString(2) // Columna indice 2 -> DESCRIPCION
-            if (id != null) {
-                usuarioEncontrado.id = id
-                usuarioEncontrado.nombre = nombre
-                usuarioEncontrado.descripcion = descripcion
-            }
-        } while (resultadoConsultaLectura.moveToNext())
+        var usuarioEncontrado = BEntrenador(0, "", "")
+        val arreglo = arrayListOf<BEntrenador>()
+        if(existeUsuario){
+            do{
+                val id = resultadoConsultaLectura.getInt(0)//columna indice 0 -> ID
+                val nombre = resultadoConsultaLectura.getString(1) // Columna indice 1 -> NOMBRE
+                val descripcion =
+                    resultadoConsultaLectura.getString(2) //Columna indice 2 -> DESCRIPCION
+                if (id != null){
+                    usuarioEncontrado = BEntrenador(0,"","")
+                    usuarioEncontrado.id = id
+                    usuarioEncontrado.nombre = nombre
+                    usuarioEncontrado.descripcion = descripcion
+                    arreglo.add(usuarioEncontrado)
+                }
+            } while (resultadoConsultaLectura.moveToNext())
+        }
+
+        //logica obtener el usuario
         resultadoConsultaLectura.close()
         baseDatosLectura.close()
         return usuarioEncontrado
