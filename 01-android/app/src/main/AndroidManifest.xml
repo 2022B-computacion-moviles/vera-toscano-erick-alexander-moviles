@@ -13,15 +13,22 @@
         android:theme="@style/Theme.MovCompEAVT"
         tools:targetApi="31">
         <activity
+            android:name=".GRecyclerView"
+            android:exported="false" />
+        <activity
             android:name=".ECrudEntrenador"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
+        </activity> <!-- android:exported="true" para que sea visible al compartir texto plano -->
         <activity
             android:name=".CIntentExplicitoParametros"
             android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -30,7 +37,6 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".BListView"
             android:exported="false">
