@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="valor"
+        android:textColor="@color/valueMod"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_description"
+        app:layout_constraintStart_toEndOf="@+id/tv_description"
+        app:layout_constraintTop_toTopOf="@+id/tv_description"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/tv_Nvalor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Nvalor"
+        android:textColor="@color/finalValue"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_description"
+        app:layout_constraintStart_toEndOf="@+id/tv_description"
+        app:layout_constraintTop_toTopOf="@+id/tv_description"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="13dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="$"
+        android:textColor="@color/finalValue"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Nvalor"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Nvalor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="413dp"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/division"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="13dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="$"
+        android:textColor="@color/valueMod"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_valor"
+        app:layout_constraintEnd_toStartOf="@+id/tv_valor"
+        app:layout_constraintTop_toTopOf="@+id/tv_valor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="234dp"
+        android:layout_height="41dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

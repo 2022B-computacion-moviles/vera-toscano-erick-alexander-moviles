@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <Button
+        android:id="@+id/callBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:drawableTop="@android:drawable/stat_sys_phone_call"
+        android:drawableTint="#5386bd"
+        android:text="Clave Digital"
+        android:textColor="#5386bd"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
+
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:drawableTop="@android:drawable/stat_sys_phone_call"
+        android:drawableTint="#5386bd"
+        android:text="Llamanos"
+        android:textColor="#5386bd"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/callBtn2"
+        app:layout_constraintStart_toEndOf="@+id/callBtn2"
+        app:layout_constraintTop_toTopOf="@+id/callBtn2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/callBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:drawableTop="@android:drawable/ic_dialog_map"
+        android:drawableTint="#5386bd"
+        android:text="Ubicanos"
+        android:textColor="#5386bd"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/callBtn2"
+        app:layout_constraintEnd_toStartOf="@+id/callBtn2"
+        app:layout_constraintTop_toTopOf="@+id/callBtn2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/passBtn"
+        android:layout_width="101dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="?android:attr/fingerprintAuthDrawable"
+        android:text="@string/password"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fingerBtn"
+        app:layout_constraintEnd_toStartOf="@+id/fingerBtn"
+        app:layout_constraintTop_toTopOf="@+id/fingerBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/logoBP"
+        android:layout_width="230dp"
+        android:layout_height="57dp"
+        android:contentDescription="@string/logoBP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/logo_banco_pichincha" />
+
+    <Button
+        android:id="@+id/fingerBtn"
+        android:layout_width="104dp"
+        android:layout_height="83dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="?android:attr/fingerprintAuthDrawable"
+        android:text="@string/finger"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
+
+    <Button
+        android:id="@+id/pinBtn"
+        android:layout_width="104dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="?android:attr/fingerprintAuthDrawable"
+        android:text="@string/pin"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fingerBtn"
+        app:layout_constraintStart_toEndOf="@+id/fingerBtn"
+        app:layout_constraintTop_toTopOf="@+id/fingerBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Cuida tus contraseñas, no las compartas con nadie"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/fingerBtn"
+        app:layout_constraintEnd_toEndOf="@+id/fingerBtn"
+        app:layout_constraintStart_toStartOf="@+id/fingerBtn" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
+        app:srcCompat="@drawable/fondobp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="¿Ingresar con otro usuario?"
+        android:textColor="#5386bd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
