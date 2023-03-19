@@ -4,6 +4,204 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroUsuarios">
+    android:background="@color/white"
+    tools:context=".RegistroAdministrador">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Telefono"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/input_direccionUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_direccionUser"
+        app:layout_constraintTop_toBottomOf="@+id/input_direccionUser" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="284dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="PANEL DE ADMINISTRADOR"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.006" />
+
+
+    <Button
+        android:id="@+id/btn_guardarUsuario"
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/black"
+        android:text="Guardar usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_emailUser" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="231dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Registro de usuarios"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Llena los siguientes campos"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Nombres del autor"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/input_fNacimientoUser"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boxradius"
+        android:hint="   Fecha de nacimiento del usuario"
+        android:textColor="@color/black"
+        android:textColorHint="#6F6F6F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/input_nombresUser"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boxradius"
+        android:hint="   Ingrese los nombres del usuario"
+        android:textColor="@color/black"
+        android:textColorHint="#6F6F6F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Dirección"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/input_fNacimientoUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_fNacimientoUser"
+        app:layout_constraintTop_toBottomOf="@+id/input_fNacimientoUser" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Correo electronico"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/input_phoneUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_phoneUser"
+        app:layout_constraintTop_toBottomOf="@+id/input_phoneUser" />
+
+    <EditText
+        android:id="@+id/input_direccionUser"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/boxradius"
+        android:hint="   Dirección del usuario"
+        android:textColor="@color/black"
+        android:textColorHint="#6F6F6F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Fecha de nacimiento"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/input_nombresUser"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="@+id/input_nombresUser"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombresUser" />
+
+    <EditText
+        android:id="@+id/input_emailUser"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/boxradius"
+        android:ems="10"
+        android:hint="   Correo del usuario"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <EditText
+        android:id="@+id/input_phoneUser"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boxradius"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="   Telefono del usuario"
+        android:inputType="phone"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

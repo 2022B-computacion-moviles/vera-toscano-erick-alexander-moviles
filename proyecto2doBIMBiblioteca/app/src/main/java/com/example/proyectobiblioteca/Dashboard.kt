@@ -43,6 +43,7 @@ class Dashboard : AppCompatActivity() {
         Log.i("Login","${administrador.nombre}")
     }
 
+
     override fun onStart() {
         super.onStart()
 
@@ -77,48 +78,60 @@ class Dashboard : AppCompatActivity() {
             startActivity(openRegistrarAutor)
         }
 
+        //boton para crear usuario
+        val btn_regisUsuario = findViewById<Button>(R.id.btn_regUser)
+        btn_regisUsuario.setOnClickListener {
+            val openRegistrarAutor = Intent(this, RegistroUsuarios::class.java)
+            openRegistrarAutor.putExtra("Usuario", administrador)
+            startActivity(openRegistrarAutor)
+        }
+
+
     }
 
     fun updateEjerciciosList(){
 
         var layoutEjercicios = findViewById<ViewGroup>(R.id.layout_ejercicios)
         val inflater = LayoutInflater.from(this)
-            .inflate(R.layout.ejercicios_view, layoutEjercicios, false)
+            .inflate(R.layout.prestamo_view, layoutEjercicios, false)
         layoutEjercicios.addView(inflater)
 
         val recyclerViewEjercicios = inflater.findViewById<RecyclerView>(R.id.rcv_ejercicios)
 
-        val listaEjercicios = arrayListOf<Ejercicio>()
+        val listaPrestamos = arrayListOf<Prestamo>()
+        //función para cargar todos los datos de una colección de firebase en un arraylist
 
-        ejercicioRegistrados.whereEqualTo("idusuario_ejercicio","${administrador.idUsuario}")
+
+
+        ejercicioRegistrados
             .get()
             .addOnSuccessListener { documents ->
             for (document in documents) {
-                listaEjercicios.add(
-                    Ejercicio(
+                listaPrestamos.add(
+                    Prestamo(
                         document.id.toString(),
-                        "${document.get("nombre_ejercicio")}",
-                        "${document.get("series_ejercicio")}",
-                        "${document.get("repeticiones_ejercicio")}",
-                        "${document.get("peso_ejercicio")} KG")
+                        "${document.get("nombreLibroPrestamo")}",
+                        "${document.get("nombreUsuarioPrestamo")}",
+                        "${document.get("fechaMaximaDevolucion")}",
+                        "${document.get("estadoDevolucion")}")
                 )
             }
                 iniciarRecyclerView(
-                    listaEjercicios,
+                    listaPrestamos,
                     this,
                     recyclerViewEjercicios
                 )
         }.addOnFailureListener { exception ->
-            Log.w("ñkasdjklasjda", "Error getting documents: ", exception)
+            Log.w("Error:", "Error getting documents: ", exception)
         }
     }
 
     fun iniciarRecyclerView(
-        lista: List<Ejercicio>,
+        lista: List<Prestamo>,
         actividad: Dashboard,
         recyclerView: RecyclerView
     ){
-        val adaptador = EjercicioListAdapter(
+        val adaptador = AdaptadorPrestamo(
             actividad,
             lista,
             recyclerView

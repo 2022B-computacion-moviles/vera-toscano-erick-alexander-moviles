@@ -45,6 +45,8 @@ class RegistroLibros : AppCompatActivity() {
                 nombreLibroF.text.clear()
                 fechaLibroF.text.clear()
                 editorialLibroF.text.clear()
+                autorLibroF.text.clear()
+
                 //regresar la anterior actividad
                 val openInicioUser = Intent(this, Dashboard::class.java)
                 openInicioUser.putExtra("Usuario", administrador)

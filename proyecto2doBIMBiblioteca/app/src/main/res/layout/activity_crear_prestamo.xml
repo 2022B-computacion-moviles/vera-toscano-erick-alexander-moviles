@@ -4,33 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/white"
     tools:context=".crearPrestamo">
 
     <Button
         android:id="@+id/btn_guardarPrestamo"
         android:layout_width="287dp"
         android:layout_height="49dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#968EE1"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/black"
         android:fontFamily="@font/nunito_bold"
         android:text="Registrar Ejercicio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_peso" />
+        app:layout_constraintTop_toBottomOf="@+id/sw_devuelto" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Ingresar Ejercicio"
-        android:textColor="@color/white"
+        android:text="Registro de prestamo"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,99 +37,39 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/nunito"
-        android:text="Escoje el autor"
-        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Escoje el libro"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_peso"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#968EE1"
-        android:fontFamily="@font/nunito"
-        android:hint="Peso en Kg"
-        android:textColor="@color/white"
-        android:textColorHint="#6F6F6F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView19"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_numeroSeries"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#968EE1"
-        android:fontFamily="@font/nunito"
-        android:hint="Ingresa el numero de series"
-        android:textColor="@color/white"
-        android:textColorHint="#6F6F6F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/nunito"
-        android:text="Completa la siguiente informacion"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/sp_ejercicio"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sp_ejercicio"
-        app:layout_constraintTop_toBottomOf="@+id/sp_ejercicio" />
-
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="Numero de series realizadas"
-        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Escoge el usuario"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerLibro"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="Peso empleado en Kg"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/input_numeroRepeticiones"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/input_numeroRepeticiones"
-        app:layout_constraintTop_toBottomOf="@+id/input_numeroRepeticiones" />
+        app:layout_constraintStart_toStartOf="@+id/spinnerLibro"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLibro" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_numeroRepeticiones"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
+        android:id="@+id/tv_fechaDevolucion"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#968EE1"
+        android:background="@drawable/boxradius"
         android:fontFamily="@font/nunito"
-        android:hint="Ingresa el numero de repeticiones"
-        android:textColor="@color/white"
+        android:hint="Fecha maxima de devolución"
+        android:textColor="@color/black"
         android:textColorHint="#6F6F6F"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView18"
@@ -139,32 +78,87 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="¿Devuelto?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_fechaDevolucion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_fechaDevolucion"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fechaDevolucion" />
+
+    <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="Numero de repeticiones realizadas"
-        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Feche de devolución"
+        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/input_numeroSeries"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerUsuario"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/input_numeroSeries"
-        app:layout_constraintTop_toBottomOf="@+id/input_numeroSeries" />
+        app:layout_constraintStart_toStartOf="@+id/spinnerUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUsuario" />
 
     <Spinner
-        android:id="@+id/sp_ejercicio"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:id="@+id/spinnerLibro"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/boxradius"
         android:textAppearance="?android:attr/textAppearanceListItem"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerUsuario"
+        android:layout_width="304dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boxradius"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <Switch
+        android:id="@+id/sw_devuelto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textOff="No devuelto"
+        android:textOn="Devuelto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Devuelto"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_devuelto"
+        app:layout_constraintEnd_toStartOf="@+id/sw_devuelto"
+        app:layout_constraintTop_toTopOf="@+id/sw_devuelto" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Devuelto"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_devuelto"
+        app:layout_constraintStart_toEndOf="@+id/sw_devuelto"
+        app:layout_constraintTop_toTopOf="@+id/sw_devuelto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

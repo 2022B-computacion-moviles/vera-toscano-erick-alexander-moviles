@@ -6,7 +6,6 @@ import android.os.Parcelable
 class Usuario(
     var idUsuario: String,
     var nombreUsuario: String,
-    var apellidoUsuario: String,
     var fechaNacimientoUsuario: String,
     var direccionUsuario: String,
     var telefonoUsuario: String,
@@ -20,7 +19,7 @@ class Usuario(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readString()!!
+
     ){
 
     }
@@ -32,7 +31,6 @@ class Usuario(
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(idUsuario)
         parcel.writeString(nombreUsuario)
-        parcel.writeString(apellidoUsuario)
         parcel.writeString(fechaNacimientoUsuario)
         parcel.writeString(direccionUsuario)
         parcel.writeString(telefonoUsuario)

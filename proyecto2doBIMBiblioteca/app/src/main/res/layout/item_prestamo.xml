@@ -2,30 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:background="@drawable/boxwhite"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/nombre_ejercicio"
+        android:id="@+id/nombre_libro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="1dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Nombre Ejercicio"
+        android:text="Nombre Libro"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/series_ejercicio"
+        android:id="@+id/nUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nombre_ejercicio"
+        android:layout_below="@id/nombre_libro"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@id/textView20"
         android:fontFamily="@font/nunito"
-        android:text="Series Ejercicio"
+        android:text="Nombre usuario"
         android:textColor="@color/black"
         android:textSize="14sp" />
 
@@ -33,7 +33,7 @@
         android:id="@+id/repeticiones_ejercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/series_ejercicio"
+        android:layout_below="@id/nUsuario"
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@id/textView12"
@@ -51,7 +51,7 @@
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@id/textView21"
         android:fontFamily="@font/nunito"
-        android:text="Peso Ejercicio"
+        android:text="estado de devolucion"
         android:textColor="@color/black"
         android:textSize="14sp" />
 
@@ -59,12 +59,13 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nombre_ejercicio"
+        android:layout_below="@id/nombre_libro"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito"
-        android:text="Series:"
-        android:textColor="@color/black" />
+        android:text="Usuario: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView12"
@@ -74,8 +75,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito"
-        android:text="Repeticiones:"
-        android:textColor="@color/black" />
+        android:text="Fecha de devolución: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView21"
@@ -85,7 +87,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito"
-        android:text="Peso:"
-        android:textColor="@color/black" />
+        android:text="Estado de devolución"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
 </RelativeLayout>

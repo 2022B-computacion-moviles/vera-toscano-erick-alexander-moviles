@@ -13,21 +13,21 @@ import com.google.firebase.ktx.Firebase
 class RegistroAdministrador : AppCompatActivity() {
 
     val db = Firebase.firestore
-    val administradores = db.collection("Administradores")
+    val administradoresDB = db.collection("Administradores")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro_usuario)
+        setContentView(R.layout.activity_registro_administradores)
     }
 
     override fun onStart() {
         super.onStart()
-        val nombreAdministradorF = findViewById<EditText>(R.id.input_nombreRegistro)
-        val correoAdministradorF = findViewById<EditText>(R.id.input_correoRegistro)
-        val contraseñaAdministradorF = findViewById<EditText>(R.id.input_passwordRegistro)
+        val nombreAdministradorF = findViewById<EditText>(R.id.input_nombreAdmin)
+        val correoAdministradorF = findViewById<EditText>(R.id.input_correoAdmin)
+        val contraseñaAdministradorF = findViewById<EditText>(R.id.input_contraseñaAdmin)
 
 
-        val btn_registrar = findViewById<Button>(R.id.btn_crearCuenta)
+        val btn_registrar = findViewById<Button>(R.id.btn_crearAdmin)
         btn_registrar.setOnClickListener {
             //se encripta la contraseña
             val contraseñaEncriptada = Base64.encodeToString(contraseñaAdministradorF.text.toString().toByteArray(), Base64.DEFAULT)
@@ -39,13 +39,13 @@ class RegistroAdministrador : AppCompatActivity() {
             if (nombreAdministradorF.text.toString().isEmpty() || correoAdministradorF.text.toString().isEmpty() || contraseñaAdministradorF.text.toString().isEmpty()) {
                 Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show()
             }else{
-                administradores.whereEqualTo("email_usuario", "${correoAdministradorF.text.toString()}")
+                administradoresDB.whereEqualTo("email_usuario", "${correoAdministradorF.text.toString()}")
                     .get()
                     .addOnSuccessListener { querySnapshot ->
                         if (!querySnapshot.isEmpty) {
                             Toast.makeText(this, "El usuario ya existe", Toast.LENGTH_SHORT).show()
                         } else {
-                            administradores.add(usuario)
+                            administradoresDB.add(usuario)
                             Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show()
                             nombreAdministradorF.text.clear()
                             correoAdministradorF.text.clear()

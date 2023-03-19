@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
 
     val db = Firebase.firestore
-    val usuarios = db.collection("Usuarios")
+    val administradores = db.collection("Administradores")
     var adaptador: ArrayAdapter<administrador>? = null
     var administrador = administrador("","","","")
 
@@ -34,18 +34,18 @@ class MainActivity : AppCompatActivity() {
 
             val passwordEncriptada = Base64.encodeToString(administrador.password.toByteArray(), Base64.DEFAULT)
 
-            usuarios.whereEqualTo("email_usuario", "${administrador.email}")
+            administradores.whereEqualTo("emailAdministrador", "${administrador.email}")
                 .get()
                 .addOnSuccessListener { querySnapshot ->
                     if (!querySnapshot.isEmpty) {
-                        usuarios.whereEqualTo("email_usuario", "${administrador.email}")
-                            .whereEqualTo("password_usuario", "${passwordEncriptada}")
+                        administradores.whereEqualTo("emailAdministrador", "${administrador.email}")
+                            .whereEqualTo("contraseñaAdministrador", "${passwordEncriptada}")
                             .get()
                             .addOnSuccessListener { querySnapshot2 ->
                                 if (!querySnapshot2.isEmpty) {
                                     // Ambas condiciones se cumplen, iniciar sesión
                                     val docSnapshot = querySnapshot2.documents[0] // asumimos que solo hay un documento que cumple la consulta
-                                    administrador.nombre = docSnapshot.getString("nombre_usuario").toString()
+                                    administrador.nombre = docSnapshot.getString("nombreAdministrador").toString()
                                     administrador.idUsuario = docSnapshot.id
                                     findViewById<EditText>(R.id.input_correoUsuario).text.clear()
                                     findViewById<EditText>(R.id.input_passwordUsuario).text.clear()
