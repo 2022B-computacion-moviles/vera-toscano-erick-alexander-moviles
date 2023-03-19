@@ -3,6 +3,8 @@ package com.example.proyectobiblioteca
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.*
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -11,6 +13,9 @@ class RegistroLibros : AppCompatActivity() {
     var administrador = administrador("", "", "", "")
     val db = Firebase.firestore
     val librosDB = db.collection("Libros")
+    val autoresDB = db.collection("Autores")
+    var idAutorSeleccionado = 0
+    val nombreAutor = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +28,27 @@ class RegistroLibros : AppCompatActivity() {
         val nombreLibroF = findViewById<EditText>(R.id.input_nombreLibro)
         val fechaLibroF = findViewById<EditText>(R.id.input_fechaLibro)
         val editorialLibroF = findViewById<EditText>(R.id.input_editorial)
-        val autorLibroF = findViewById<EditText>(R.id.input_autor)
+        val listAutores = findViewById<Spinner>(R.id.spinnerAutor)
+
+        autoresDB.get().addOnSuccessListener { result ->
+            for (document in result){
+                nombreAutor.add(document.get("nombresAutor").toString())
+                Log.i("nombreAutor","${nombreAutor}")
+            }
+            val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, nombreAutor)
+            listAutores.adapter = adaptador
+
+            listAutores.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener{
+                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, posicionLibro: Int, p3: Long) {
+                    idAutorSeleccionado = posicionLibro
+                }
+
+                override fun onNothingSelected(p0: AdapterView<*>?) {
+                    TODO("Not yet implemented")
+                }
+            }
+        }
 
         val btn_guardarLibro = findViewById<Button>(R.id.btn_guardarLibro)
         btn_guardarLibro.setOnClickListener {
@@ -32,11 +57,11 @@ class RegistroLibros : AppCompatActivity() {
                 "nombreLibro" to nombreLibroF.text.toString(),
                 "fechaLibro" to fechaLibroF.text.toString(),
                 "editorialLibro" to editorialLibroF.text.toString(),
-                "autorLibro" to autorLibroF.text.toString()
+                "autorLibro" to nombreAutor.elementAt(idAutorSeleccionado).toString()
             )
             if (nombreLibroF.text.toString().isEmpty() || fechaLibroF.text.toString()
                     .isEmpty() || editorialLibroF.text.toString()
-                    .isEmpty() || autorLibroF.text.toString().isEmpty()
+                    .isEmpty()
             ) {
                 Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show()
             } else {
@@ -45,7 +70,6 @@ class RegistroLibros : AppCompatActivity() {
                 nombreLibroF.text.clear()
                 fechaLibroF.text.clear()
                 editorialLibroF.text.clear()
-                autorLibroF.text.clear()
 
                 //regresar la anterior actividad
                 val openInicioUser = Intent(this, Dashboard::class.java)

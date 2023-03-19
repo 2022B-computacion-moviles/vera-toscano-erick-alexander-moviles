@@ -32,10 +32,10 @@
         android:backgroundTint="@color/black"
         android:fontFamily="@font/nunito_bold"
         android:text="Registrar prestamo"
-        app:layout_constraintEnd_toEndOf="@+id/layout_ejercicios"
+        app:layout_constraintEnd_toEndOf="@+id/layout_prestamos"
         app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/layout_ejercicios"
-        app:layout_constraintTop_toBottomOf="@+id/layout_ejercicios" />
+        app:layout_constraintStart_toStartOf="@+id/layout_prestamos"
+        app:layout_constraintTop_toBottomOf="@+id/layout_prestamos" />
 
     <Button
         android:id="@+id/btn_cerrarSesion"
@@ -133,7 +133,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/layout_ejercicios"
+        android:id="@+id/layout_prestamos"
         android:layout_width="329dp"
         android:layout_height="266dp"
         android:layout_marginTop="8dp"

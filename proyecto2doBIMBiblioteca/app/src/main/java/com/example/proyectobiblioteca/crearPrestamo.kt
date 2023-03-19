@@ -85,17 +85,17 @@ class crearPrestamo : AppCompatActivity() {
 
 
         btnCrearPrestamo.setOnClickListener {
-            var ejercicioAgregado = hashMapOf(
+            var prestamoItem = hashMapOf(
                 "idAdministradorPrestamo" to administrador.idUsuario.toString(),
                 "nombreLibroPrestamo" to nombre_Libro.elementAt(idLibroSeleccionado).toString(),
                 "nombreUsuarioPrestamo" to nombre_Usuario.elementAt(idUsuarioSeleccionado).toString(),
                 "fechaMaximaDevolucion" to fechaDevolucion.text.toString(),
                 "estadoDevolucion" to estadoText
             )
-            prestamosDB.add(ejercicioAgregado).addOnSuccessListener {
+            prestamosDB.add(prestamoItem).addOnSuccessListener {
 
                 fechaDevolucion.text.clear()
-                Toast.makeText(this,"Se registro el ejercicio", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Se registro el prestamo", Toast.LENGTH_SHORT).show()
                 val openInicioUser = Intent(this, Dashboard::class.java)
                 openInicioUser.putExtra("Usuario", administrador)
                 startActivity(openInicioUser)

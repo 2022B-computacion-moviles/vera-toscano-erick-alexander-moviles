@@ -21,11 +21,11 @@ class Dashboard : AppCompatActivity() {
     var idItemSeleccionado = 0
     var administrador = administrador("","","","")
     val db = Firebase.firestore
-    val ejercicioRegistrados = db.collection("Prestamos")
+    val prestamosDB = db.collection("Prestamos")
     var adaptador: ArrayAdapter<Dashboard>? = null
 
 
-    var resultAddEjercicio = registerForActivityResult(
+    var resultAddPrestamo = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ){ result ->
         if (result.resultCode == Activity.RESULT_OK){
@@ -52,14 +52,14 @@ class Dashboard : AppCompatActivity() {
         val tv_usuario = findViewById<TextView>(R.id.tv_usuario)
         tv_usuario.setText("${administrador.nombre}")
 
-        updateEjerciciosList()
+        updatePrestamoList()
 
         //boton para crear un prestamo
-        val btn_agregarEjercicio = findViewById<Button>(R.id.btn_regPrestamo)
-        btn_agregarEjercicio.setOnClickListener {
-            val openAgregarEjercicio = Intent(this, crearPrestamo::class.java)
-            openAgregarEjercicio.putExtra("Usuario", administrador)
-            startActivity(openAgregarEjercicio)
+        val btn_agregarPrestamoLibro = findViewById<Button>(R.id.btn_regPrestamo)
+        btn_agregarPrestamoLibro.setOnClickListener {
+            val openRegistrarPrestamo = Intent(this, crearPrestamo::class.java)
+            openRegistrarPrestamo.putExtra("Usuario", administrador)
+            startActivity(openRegistrarPrestamo)
         }
 
         //boton para crear un libro
@@ -89,21 +89,21 @@ class Dashboard : AppCompatActivity() {
 
     }
 
-    fun updateEjerciciosList(){
+    fun updatePrestamoList(){
 
-        var layoutEjercicios = findViewById<ViewGroup>(R.id.layout_ejercicios)
+        var layoutPrestamo = findViewById<ViewGroup>(R.id.layout_prestamos)
         val inflater = LayoutInflater.from(this)
-            .inflate(R.layout.prestamo_view, layoutEjercicios, false)
-        layoutEjercicios.addView(inflater)
+            .inflate(R.layout.prestamo_view, layoutPrestamo, false)
+        layoutPrestamo.addView(inflater)
 
-        val recyclerViewEjercicios = inflater.findViewById<RecyclerView>(R.id.rcv_ejercicios)
+        val recyclerViewPrestamos = inflater.findViewById<RecyclerView>(R.id.RView_Prestamos)
 
         val listaPrestamos = arrayListOf<Prestamo>()
         //función para cargar todos los datos de una colección de firebase en un arraylist
 
 
 
-        ejercicioRegistrados
+        prestamosDB
             .get()
             .addOnSuccessListener { documents ->
             for (document in documents) {
@@ -119,7 +119,7 @@ class Dashboard : AppCompatActivity() {
                 iniciarRecyclerView(
                     listaPrestamos,
                     this,
-                    recyclerViewEjercicios
+                    recyclerViewPrestamos
                 )
         }.addOnFailureListener { exception ->
             Log.w("Error:", "Error getting documents: ", exception)

@@ -19,8 +19,8 @@ class AdaptadorPrestamo(
         init {
             libroPrestamo = view.findViewById(R.id.nombre_libro)
             usuarioPrestamo = view.findViewById(R.id.nUsuario)
-            fechaDevolucionPrestamo = view.findViewById(R.id.repeticiones_ejercicio)
-            estadoDevolucion = view.findViewById(R.id.peso_ejercicio)
+            fechaDevolucionPrestamo = view.findViewById(R.id.tvFechaDev)
+            estadoDevolucion = view.findViewById(R.id.estadoDevLibro)
         }
     }
 
