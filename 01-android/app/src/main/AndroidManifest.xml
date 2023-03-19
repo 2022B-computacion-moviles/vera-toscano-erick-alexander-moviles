@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MovCompEAVT"
         tools:targetApi="33">
         <activity
+            android:name=".IFirebaseUIAuth"
+            android:exported="false" />
+        <activity
             android:name=".HGoogleMaps"
             android:exported="false" />
         <!--
