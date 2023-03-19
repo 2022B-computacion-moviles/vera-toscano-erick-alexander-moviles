@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824454300561",
+    "project_id": "biblioteca-5390f",
+    "storage_bucket": "biblioteca-5390f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824454300561:android:f8014359c67a156e141030",
+        "android_client_info": {
+          "package_name": "com.example.proyectobiblioteca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824454300561-q2cmm6d2qcie9j40m9mh6t866jfq8ina.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_FkvAWOQgOX_Y2VkiMjPYJzYmaNG7xJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824454300561-q2cmm6d2qcie9j40m9mh6t866jfq8ina.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

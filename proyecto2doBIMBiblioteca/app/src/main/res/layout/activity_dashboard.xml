@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Dashboard">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="284dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="PANEL DE ADMINISTRADOR"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <Button
+        android:id="@+id/btn_regPrestamo"
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Registrar prestamo"
+        app:layout_constraintEnd_toEndOf="@+id/layout_ejercicios"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/layout_ejercicios"
+        app:layout_constraintTop_toBottomOf="@+id/layout_ejercicios" />
+
+    <Button
+        android:id="@+id/btn_cerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:onClick="cerrarSesion"
+        android:text="Cerrar Sesión"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_usuario2"
+        app:layout_constraintStart_toEndOf="@+id/tv_usuario2"
+        app:layout_constraintTop_toTopOf="@+id/tv_usuario2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_regLibro"
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Registrar Libro"
+        app:layout_constraintEnd_toEndOf="@+id/btn_regPrestamo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_regPrestamo"
+        app:layout_constraintTop_toBottomOf="@+id/btn_regPrestamo" />
+
+    <Button
+        android:id="@+id/btn_regAutor"
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Registrar autor"
+        app:layout_constraintEnd_toEndOf="@+id/btn_regLibro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_regLibro"
+        app:layout_constraintTop_toBottomOf="@+id/btn_regLibro" />
+
+    <Button
+        android:id="@+id/btn_regUser"
+        android:layout_width="287dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Registrar usuario"
+        app:layout_constraintEnd_toEndOf="@+id/btn_regAutor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_regAutor"
+        app:layout_constraintTop_toBottomOf="@+id/btn_regAutor" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/nunito"
+        android:text="Prestamos realizados"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_usuario" />
+
+    <TextView
+        android:id="@+id/tv_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="nombreUsuario"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_usuario2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_usuario2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_usuario2" />
+
+    <TextView
+        android:id="@+id/tv_usuario2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Bienvenido usuario:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_ejercicios"
+        android:layout_width="329dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="74dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_usuario2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_usuario2"
+        app:layout_constraintTop_toTopOf="@+id/tv_usuario2"
+        app:layout_constraintVertical_bias="0.177"
+        app:srcCompat="@drawable/avatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
