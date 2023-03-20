@@ -105,10 +105,10 @@ class crudFirebase {
             if (document != null) {
                 estudiante = Estudiantes(
                     document.id,
-                    document.data!!["nombre"].toString(),
-                    document.data!!["codigo"].toString(),
-                    document.data!!["aula"].toString(),
-                    document.data!!["creditos"].toString().toInt(),
+                    document.data!!["nombres"].toString(),
+                    document.data!!["apellidos"].toString(),
+                    document.data!!["direccion"].toString(),
+                    document.data!!["quintil"].toString().toInt(),
                 )
                 callback(estudiante)
             }
@@ -122,10 +122,10 @@ class crudFirebase {
             for (document in result) {
                 val estudiante = Estudiantes(
                     document.id,
-                    document.data["nombre"].toString(),
-                    document.data["codigo"].toString(),
-                    document.data["aula"].toString(),
-                    document.data["creditos"].toString().toInt()
+                    document.data["nombres"].toString(),
+                    document.data["apellidos"].toString(),
+                    document.data["direccion"].toString(),
+                    document.data["quintil"].toString().toInt()
                 )
                 estudiantes.add(estudiante)
             }

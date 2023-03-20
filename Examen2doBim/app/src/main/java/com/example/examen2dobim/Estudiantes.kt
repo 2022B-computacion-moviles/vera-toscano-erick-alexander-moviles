@@ -8,6 +8,6 @@ class Estudiantes(
     val quintil: Int,
 ) {
     override fun toString(): String {
-        return "$nombres | $apellidos | $direccion | $quintil";
+        return "$nombres $apellidos | $direccion | $quintil";
     }
 }
