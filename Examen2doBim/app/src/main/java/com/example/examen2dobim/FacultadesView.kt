@@ -1,4 +1,4 @@
-package com.example.deber01
+package com.example.examen2dobim
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,8 +13,8 @@ import android.widget.ListView
 import androidx.activity.result.contract.ActivityResultContracts
 
 class FacultadesView : AppCompatActivity() {
-    var idSeleccionado = 0
-    var facultades = ArrayList<Facultades>()
+    var idSeleccionado = ""
+    var facultadesAL = ArrayList<Facultades>()
 
     val contenidoIntent =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -37,11 +37,11 @@ class FacultadesView : AppCompatActivity() {
 
         //DatabaseHelper(this).dropTables()
         // ESTUDIANTES
-        val btnCrearEstudiante = findViewById<Button>(R.id.btn_crear_facultad)
-        facultades = CRUDsqLite(this).leerFacultades()
+        val bntCrearFacultad = findViewById<Button>(R.id.btn_crear_facultad)
 
-        btnCrearEstudiante.setOnClickListener {
-            abrirActividadParametros(AdministrarFacultades::class.java, "crear", 0)
+
+        bntCrearFacultad.setOnClickListener {
+            abrirActividadParametros(AdministrarFacultades::class.java, "crear", "")
         }
 
         cargarFacultades()
@@ -49,7 +49,7 @@ class FacultadesView : AppCompatActivity() {
         // Estudiantes
         val btnEstudiantes = findViewById<Button>(R.id.btn_estudiantes)
         btnEstudiantes.setOnClickListener {
-            abrirActividadParametros(EstudiantesView::class.java, modo = "crud", id = 0)
+            abrirActividadParametros(EstudiantesView::class.java, modo = "crud", id = "")
         }
     }
 
@@ -61,7 +61,7 @@ class FacultadesView : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_facultades, menu)
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
-        idSeleccionado = facultades[info.position].id
+        idSeleccionado = facultadesAL[info.position].id
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
@@ -75,7 +75,7 @@ class FacultadesView : AppCompatActivity() {
                 true
             }
             R.id.menu_facultad_eliminar -> {
-                CRUDsqLite(this).eliminarFacultad(idSeleccionado)
+                crudFirebase().eliminarFacultad(idSeleccionado)
                 cargarFacultades()
                 true
             }
@@ -93,27 +93,23 @@ class FacultadesView : AppCompatActivity() {
 
     fun cargarFacultades() {
         val listView = findViewById<ListView>(R.id.lv_facultades)
-        facultades = CRUDsqLite(this).leerFacultades()
-        val adaptador = ArrayAdapter(
-            this,
-            android.R.layout.simple_list_item_1,
-            facultades
-        )
-
-        listView.adapter = adaptador
-        adaptador.notifyDataSetChanged()
-        registerForContextMenu(listView)
-
-        listView.setOnItemClickListener { parent, view, position, id ->
-            abrirActividadParametros(
-                AdministrarFacultades::class.java,
-                "ver",
-                facultades[position].id
+        crudFirebase().leerFacultades { facultades ->
+            val adaptador = ArrayAdapter(
+                this, android.R.layout.simple_list_item_1, facultades
             )
+            listView.adapter = adaptador
+            adaptador.notifyDataSetChanged()
+            registerForContextMenu(listView)
+            listView.setOnItemClickListener { _, _, position, _ ->
+                abrirActividadParametros(
+                    AdministrarFacultades::class.java, "ver", facultades[position].id
+                )
+            }
+            facultadesAL = facultades
         }
     }
 
-    fun abrirActividadParametros(clase: Class<*>, modo: String, id: Int) {
+    fun abrirActividadParametros(clase: Class<*>, modo: String, id: String) {
         val intentExplicito = Intent(
             this,
             clase

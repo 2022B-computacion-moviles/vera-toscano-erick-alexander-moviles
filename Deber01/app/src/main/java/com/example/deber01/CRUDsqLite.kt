@@ -49,7 +49,7 @@ class CRUDsqLite(
         return facultades
     }
 
-    fun leerFacultad(): ArrayList<Facultades> {
+    fun leerFacultades(): ArrayList<Facultades> {
         val facultades = ArrayList<Facultades>()
         val db = this.readableDatabase
         val cursor = db.rawQuery("SELECT * FROM Facultad", null)
