@@ -16,6 +16,7 @@ class RegistroLibros : AppCompatActivity() {
     val autoresDB = db.collection("Autores")
     var idAutorSeleccionado = 0
     val nombreAutor = arrayListOf<String>()
+    val apellidoAutor = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +33,12 @@ class RegistroLibros : AppCompatActivity() {
 
         autoresDB.get().addOnSuccessListener { result ->
             for (document in result){
-                nombreAutor.add(document.get("nombresAutor").toString())
+                nombreAutor.add(document.get("nombresAutor" ).toString()+" "+document.get("apellidosAutor" ).toString())
                 Log.i("nombreAutor","${nombreAutor}")
             }
+
+
+
             val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, nombreAutor)
             listAutores.adapter = adaptador
 

@@ -144,6 +144,7 @@ class Dashboard : AppCompatActivity() {
 
 
     fun cerrarSesion(view: View?) {
-        finish()
+        val openlogin = Intent(this, MainActivity::class.java)
+        startActivity(openlogin)
     }
 }

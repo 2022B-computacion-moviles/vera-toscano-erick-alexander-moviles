@@ -11,9 +11,9 @@ import com.google.firebase.ktx.Firebase
 
 class crearPrestamo : AppCompatActivity() {
 
-    var administrador = administrador("","","","")
-    var user = Usuario("","","","","","")
-    var book = Libro("","","","")
+    var administrador = administrador("", "", "", "")
+    var user = Usuario("", "", "", "", "", "")
+    var book = Libro("", "", "", "")
     val db = Firebase.firestore
     val librosDB = db.collection("Libros")
     val usuariosDB = db.collection("Usuarios")
@@ -39,21 +39,27 @@ class crearPrestamo : AppCompatActivity() {
         var estadoText = ""
 
         estadoDevolucion.setOnCheckedChangeListener { _, isChecked ->
-            estadoText = if (isChecked) estadoDevolucion.textOn as String else estadoDevolucion.textOff as String
+            estadoText =
+                if (isChecked) estadoDevolucion.textOn as String else estadoDevolucion.textOff as String
 
         }
 
         librosDB.get().addOnSuccessListener { result ->
-            for (document in result){
+            for (document in result) {
                 nombre_Libro.add(document.get("nombreLibro").toString())
-                Log.i("NombreLibro","${nombre_Libro}")
+                Log.i("NombreLibro", "${nombre_Libro}")
             }
             val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, nombre_Libro)
             listLibros.adapter = adaptador
 
             listLibros.onItemSelectedListener = object :
-            AdapterView.OnItemSelectedListener{
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, posicionLibro: Int, p3: Long) {
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    p0: AdapterView<*>?,
+                    p1: View?,
+                    posicionLibro: Int,
+                    p3: Long
+                ) {
                     idLibroSeleccionado = posicionLibro
                 }
 
@@ -64,16 +70,21 @@ class crearPrestamo : AppCompatActivity() {
         }
 
         usuariosDB.get().addOnSuccessListener { result ->
-            for (document in result){
+            for (document in result) {
                 nombre_Usuario.add(document.get("nombreUser").toString())
-                Log.i("NombreUsuario","${nombre_Usuario}")
+                Log.i("NombreUsuario", "${nombre_Usuario}")
             }
             val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, nombre_Usuario)
             listUsuarios.adapter = adaptador
 
             listUsuarios.onItemSelectedListener = object :
-            AdapterView.OnItemSelectedListener{
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, posicionUsuario: Int, p3: Long) {
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    p0: AdapterView<*>?,
+                    p1: View?,
+                    posicionUsuario: Int,
+                    p3: Long
+                ) {
                     idUsuarioSeleccionado = posicionUsuario
                 }
 
@@ -92,17 +103,21 @@ class crearPrestamo : AppCompatActivity() {
                 "fechaMaximaDevolucion" to fechaDevolucion.text.toString(),
                 "estadoDevolucion" to estadoText
             )
-            prestamosDB.add(prestamoItem).addOnSuccessListener {
+            if (fechaDevolucion.text.toString().isEmpty()) {
+                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show()
+            } else {
+                prestamosDB.add(prestamoItem).addOnSuccessListener {
 
-                fechaDevolucion.text.clear()
-                Toast.makeText(this,"Se registro el prestamo", Toast.LENGTH_SHORT).show()
-                val openInicioUser = Intent(this, Dashboard::class.java)
-                openInicioUser.putExtra("Usuario", administrador)
-                startActivity(openInicioUser)
-            }.addOnFailureListener{
-                Log.i("NOOOOO","Failed")
+                    fechaDevolucion.text.clear()
+                    Toast.makeText(this, "Se registro el prestamo", Toast.LENGTH_SHORT).show()
+                    val openInicioUser = Intent(this, Dashboard::class.java)
+                    openInicioUser.putExtra("Usuario", administrador)
+                    startActivity(openInicioUser)
+                }.addOnFailureListener {
+                    Log.i("NOOOOO", "Failed")
+                }
             }
-        }
 
+        }
     }
 }
